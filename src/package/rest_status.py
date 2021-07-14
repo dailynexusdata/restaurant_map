@@ -131,7 +131,14 @@ for i in rest_list:
         order_now_area = order_now_string.find_parent("a")
         #dict_order_now[i].append(order_now_area.prettify())
         rest['order'] = order_now_area.prettify()
-        
+
+    elif soup.find(string="$"):
+    # Find the word "Order inside a <b> tag, then get the parent div"
+        order_string1 = soup.find(string="$")
+        order_area1 = order_string1.find_parent("b").find_parent("div")
+        for anchor in order_area1.find_all('a', {'class': 'YhemCb'}):
+            price_range = anchor.getText()
+            rest['price range'] = {price_range}
     try:
         # for hours:
         try:
@@ -165,7 +172,27 @@ for i in rest_list:
 
     except:
         print("couldn't find hours for restaurant", i)
-        
+
+    
+    
+    '''
+    try:
+        # for $:
+        browser.find_element_by_xpath(
+            "//div//span[ @class='YhemCb' and @data-ved='2ahUKEwj46vzz5dvxAhVMoZ4KHddVDyMQxuQDKAAwFXoECD0QAQ' ]"
+            ).click()
+
+        # for $$:
+        browser.find_element_by_xpath(
+            "//div//span[ @class='YhemCb' and @data-ved='2ahUKEwjIhe2P5NvxAhWHZM0KHRKTCQ4QxuQDKAAwGHoECGAQAQ' ]"
+            ).click()
+            
+    except:
+        print("couldn't find price range for restaurant", i)
+
+    '''
+
+    
     output.append(rest)
 
 print(output)
@@ -175,4 +202,6 @@ print(output)
 #print(dict_times)
 
 
+# price ranges (multiple dollar signs)
+# reviews
     

@@ -111,6 +111,7 @@ for i in rest_list:
     order_string = soup.find(string="Order")
     order_now_string = soup.find(string="Order Now")
     order_string1 = soup.find(string="$")
+    order_string2 = soup.find(string="$$")
 
     if order_string:
         # Find the word "Order inside a <b> tag, then get the parent div"
@@ -134,6 +135,12 @@ for i in rest_list:
 
     elif order_string1:
         rest['price range'] = order_string1
+
+    elif order_string2:
+        rest['price range'] = order_string2
+
+    else:
+        rest['price range'] = "no price range found"
 
     try:
         # for hours:

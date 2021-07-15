@@ -139,6 +139,14 @@ for i in rest_list:
         for anchor in order_area1.find_all('a', {'class': 'YhemCb'}):
             price_range = anchor.getText()
             rest['price range'] = {price_range}
+
+    elif soup.find(string="$$"):
+    # Find the word "Order inside a <b> tag, then get the parent div"
+        order_string2 = soup.find(string="$$")
+        order_area2 = order_string2.find_parent("b").find_parent("div")
+        for anchor in order_area2.find_all('a', {'class': 'YhemCb'}):
+            price_range2 = anchor.getText()
+            rest['price range'] = {price_range2}
     try:
         # for hours:
         try:

@@ -15,7 +15,7 @@ def get_url(name):
 
 
 # we would want to loop over all of the restautants in restaurants.txt - you can change the names to make sure the search result appears correctly
-url = get_url("woodstock's pizza")
+url = get_url("freebirds")
 
 options = webdriver.ChromeOptions()
 # options.add_argument('headless') # uncommented for testing
@@ -34,7 +34,7 @@ order_area = order_string.find_parent("b").find_parent("div")
 
 for anchor in order_area.find_all('a', {'class': 'xFAlBc'}):
     delivery_name = anchor.getText()
-    delivery_url = anchor.get('href', '/')
+    delivery_url = anchor.get('href', '/')SS
 
     print(f'* {delivery_name}, {delivery_url}')
 
@@ -44,9 +44,9 @@ for anchor in order_area.find_all('a', {'class': 'xFAlBc'}):
 #
 
 # for woodstocks there is als an Order Now for grubhub -- which isn't listed later below
-order_now_string = soup.find(string="Order Now")
-order_now_area = order_now_string.find_parent("a")
-print(order_now_area.prettify())
+#order_now_string = soup.find(string="Order Now")
+#order_now_area = order_now_string.find_parent("a")
+# print(order_now_area.prettify())
 
 
 #
@@ -55,15 +55,30 @@ print(order_now_area.prettify())
 
 # click on the 'More hours' to see table
 # see: https://stackoverflow.com/a/42982559
-browser.find_element_by_xpath(
-    "//div//span[contains(text(), 'More hours') and @class='XCdOnb']"
-).click()
+
+try:
+    browser.find_element_by_xpath(
+        "//div//span[contains(text(), 'More hours') and @class='XCdOnb']"
+    ).click()
+except:
+    browser.find_element_by_xpath(
+        "//div//span[ @class='BTP3Ac']"
+    ).click()
+
 
 # reset the beautiful soup - maybe change variable name idk
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 
 # find the table and go through all of the rows
-hour_area = soup.find("div", {"class", "eRD3Mb"}).find("table")
+try:
+    hour_area = soup.find("div", {"class", "eRD3Mb"}).find("table")
+except:
+    hour_area = soup.find("table", {"class", "WgFkxc"})
+
+hour_area = soup.find("div", {"class", "eRD3Mb"})
+if hour_area:
+    hour_area.find("table")
+
 for row in hour_area.find_all("tr"):
     day, times = row.find_all("td")
 

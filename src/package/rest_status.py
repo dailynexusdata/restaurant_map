@@ -114,7 +114,8 @@ for i in rest_list:
     browser.get(url)
     
     soup = BeautifulSoup(browser.page_source, 'html.parser')
-    
+
+    '''
     if soup.find(string="Order"):
     # Find the word "Order inside a <b> tag, then get the parent div"
         order_string = soup.find(string="Order")
@@ -147,6 +148,39 @@ for i in rest_list:
         for anchor in order_area2.find_all('a', {'class': 'YhemCb'}):
             price_range2 = anchor.getText()
             rest['price range'] = {price_range2}
+    '''
+
+    order_string = soup.find(string="Order")
+    order_now_string = soup.find(string="Order Now")
+    order_string1 = soup.find(string="$")
+    order_string2 = soup.find(string="$$")
+
+    if order_string:
+        # Find the word "Order inside a <b> tag, then get the parent div"
+        try:
+            order_area = order_string.find_parent("b").find_parent("div")
+        except:
+            order_area = order_string.find_parent("div")
+
+        for anchor in order_area.find_all('a', {'class': 'xFAlBc'}):
+            delivery_name = anchor.getText()
+            delivery_url = anchor.get('href', '/')
+            #dict_order[i].append([f'* {delivery_name}, {delivery_url}'])
+            rest['order'] = {"name": delivery_name, "url": delivery_url}
+            # = [f'* {delivery_name}, {delivery_url}']
+
+    elif order_now_string:
+        order_now_area = order_now_string.find_parent("a")
+        # dict_order_now[i].append(order_now_area.prettify())
+        # we might want to actually make this order_now
+        rest['order_now'] = order_now_area.prettify()
+
+    elif order_string1:
+        rest['price range'] = order_string1
+
+    elif order_string2:
+        rest['price range'] = order_string2
+        
     try:
         # for hours:
         try:

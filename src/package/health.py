@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 from selenium import webdriver
 import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
@@ -7,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 url = "https://pressagent.envisionconnect.com/main.phtml?agency=sbc"
 
 # woodstocks (with an s) wont work
-name = "woodstock"
+name = "habit"
 
 options = webdriver.ChromeOptions()
 # options.add_argument('headless') # uncommented for testing

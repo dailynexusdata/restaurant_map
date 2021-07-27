@@ -35,8 +35,6 @@ first_column
 
 for index, row in df.iterrows():
 
-    print(row)
-
     options = webdriver.ChromeOptions()
     # options.add_argument('headless') # uncommented for testing
     browser = webdriver.Chrome(

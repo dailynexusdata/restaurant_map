@@ -164,10 +164,11 @@ for i in rest_list:
         menu_area1 = menu_area.find_parent("div")
 
     menu_link = menu_area1.find('a', {"class": "xFAlBc"})
-    rest['Menu'] = {"url": menu_link['href']}  # causes TYPE ERROR
+    rest['Menu'] = {"url": menu_link['href']}
 
     phone_area = soup.find(
-        'a', {'data-local-attribute': 'd3ph'})
+        'a', {'data-local-attribute': 'd3ph'}
+    )
     if phone_area:
         rest['phone_number'] = phone_area.find("span").getText()
 

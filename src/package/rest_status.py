@@ -168,7 +168,8 @@ for i in rest_list:
 
     phone_area = soup.find(
         'a', {'data-local-attribute': 'd3ph'})
-    rest['phone_number'] = phone_area.find("span").getText()
+    if phone_area:
+        rest['phone_number'] = phone_area.find("span").getText()
 
     print(rest)
 

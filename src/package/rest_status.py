@@ -159,16 +159,20 @@ for i in rest_list:
     menu_area = soup.find("div", {"data-attrid": "kc:/local:menu"})
 
     try:
-        menu_area1 = menu_area.find_parent("b").find_parent("div")
+        try:
+            menu_area1 = menu_area.find_parent("b").find_parent("div")
+        except:
+            menu_area1 = menu_area.find_parent("div")
     except:
-        menu_area1 = menu_area.find_parent("div")
+        print("no menu")
 
     menu_link = menu_area1.find('a', {"class": "xFAlBc"})
     rest['Menu'] = {"url": menu_link['href']}  # causes TYPE ERROR
 
     phone_area = soup.find(
         'a', {'data-local-attribute': 'd3ph'})
-    rest['phone_number'] = phone_area.find("span").getText()
+    if phone_area:
+        rest['phone_number'] = phone_area.find("span").getText()
 
     print(rest)
 

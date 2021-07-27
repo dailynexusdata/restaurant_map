@@ -1,19 +1,39 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
+import csv
 import pandas as pd
+import math
 from webdriver_manager.chrome import ChromeDriverManager
 
 # this is the actual website being used:::
+
 url = "https://pressagent.envisionconnect.com/main.phtml?agency=sbc"
 
+
+'''
+with open('restaurants.csv', newline='') as csvfile:
+    reader.DictReader(csvfile)
+    for row in reader:
+        print(row['name'], row['address']
+'''
+
+'''
 alist = ["woodstock", "freebirds", "starbucks coffee #5332", "buddha bowls", "super cucas #3",
          "rockfire grill", "bagel cafe", "naan stop", "sizzling lunch", "the habit burger grill", "pho bistro",
          "hana kitchen", "deja vu", "domino's pizza", "caje"]
-         
+'''
+selected_vars = ['name', 'address']
+df = pd.read_csv('restaurants2.csv', usecols = selected_vars)
+#print(df)
+
 # woodstocks (with an s) wont work
 #name = "woodstock"
 
-for name in alist:
+first_column = df.iloc[:,0].tolist()
+first_column
+
+
+for name in first_column:
     options = webdriver.ChromeOptions()
     # options.add_argument('headless') # uncommented for testing
     browser = webdriver.Chrome(
@@ -24,23 +44,40 @@ for name in alist:
 
 
     # pass in the restaurant name:
-    inputBox = browser.find_element_by_id("businessname")
-    inputBox.send_keys(name)
-    inputBox.submit()
-    link = browser.find_elements_by_xpath("//a[@href]")[0].get_attribute("href")
-    browser.get(link)
-
-    rows = browser.find_elements_by_xpath(
-        "//table//tbody//tr"
-    )[2].find_elements_by_xpath("//td//table//tbody//tr")
+    inputBox = browser.find_element_by_id("businessname") # finds the place where we will input the name
+    inputBox.send_keys(name) # actually inputting name of restaurant into search box
+    inputBox.submit() # submitting search
 
 
-    for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
-        top_row_data = top_row.find_elements_by_tag_name("td")
+    # check if multiple facility names pop up
+    if count(browser.find_elements_by_xpath("//a[@href]").get_attribute("href")) > 1:
+        # find corresponding address in df that matches restaurant name
+        index_num = df[df['name'] == name].index[0]
+        rest_address = df.iloc[index_num, 1]
+        # find the address on the website to figure out the correct one, then click on the facility name corresponding to that
+        address_string = soup.find(string = rest_address.tostring())
+        
 
-        date = top_row_data[0].text
+    '''
+    # check if there is only 1 facility name
+    # if there is only 1 facility name then get the first href
+    else:
+        link = browser.find_elements_by_xpath("//a[@href]")[0].get_attribute("href")
+        browser.get(link)
 
-        top_row_data[1].click()
-        result = hidden_row.find_elements_by_tag_name("td")[1].text
+        rows = browser.find_elements_by_xpath(
+            "//table//tbody//tr"
+        )[2].find_elements_by_xpath("//td//table//tbody//tr")
 
-        print(name, date, ":", result.replace("\\n", " "))
+
+        for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
+            top_row_data = top_row.find_elements_by_tag_name("td")
+
+            date = top_row_data[0].text
+
+            top_row_data[1].click()
+            result = hidden_row.find_elements_by_tag_name("td")[1].text
+
+            print(name, date, ":", result.replace("\\n", " "))
+
+    '''

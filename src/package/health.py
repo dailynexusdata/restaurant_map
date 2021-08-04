@@ -35,6 +35,8 @@ first_column
 
 for index, row in df.iterrows():
 
+    print(row)
+
     options = webdriver.ChromeOptions()
     # options.add_argument('headless') # uncommented for testing
     browser = webdriver.Chrome(
@@ -89,3 +91,6 @@ for index, row in df.iterrows():
         result = hidden_row.find_elements_by_tag_name("td")[1].text
 
         print(row["name"], date, ":", result.replace("\\n", " "))
+
+    browser.close()
+    browser.quit()

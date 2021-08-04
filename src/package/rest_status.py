@@ -159,9 +159,12 @@ for i in rest_list:
     menu_area = soup.find("div", {"data-attrid": "kc:/local:menu"})
 
     try:
-        menu_area1 = menu_area.find_parent("b").find_parent("div")
+        try:
+            menu_area1 = menu_area.find_parent("b").find_parent("div")
+        except:
+            menu_area1 = menu_area.find_parent("div")
     except:
-        menu_area1 = menu_area.find_parent("div")
+        print("no menu")
 
     menu_link = menu_area1.find('a', {"class": "xFAlBc"})
     rest['Menu'] = {"url": menu_link['href']}
@@ -222,12 +225,17 @@ for i in rest_list:
         print("couldn't find price range for restaurant", i)
     '''
     if stars:
-        print(stars.getText())
+        # print(stars.getText())
+        rest["stars"] = stars.getText()
 
-    if rest_closed:
-        print("temporarily closed")
+    rest["closed"] = rest_closed
+    # if rest_closed:
+    #     print("temporarily closed")
 
     output.append(rest)
+
+    browser.close()
+    browser.quit()
 
 print(output)
 

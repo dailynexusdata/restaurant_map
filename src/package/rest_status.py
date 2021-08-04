@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
+import json
 
 # Things that would be good to get:
 # get reviews?
@@ -96,7 +97,7 @@ dict_times = {}
 '''
 
 output = []
-for i in rest_list:
+for i in ["buddha bowls"]:
     rest = {}
 
     url = get_url(i)
@@ -163,11 +164,11 @@ for i in rest_list:
             menu_area1 = menu_area.find_parent("b").find_parent("div")
         except:
             menu_area1 = menu_area.find_parent("div")
+
+        menu_link = menu_area1.find('a', {"class": "xFAlBc"})
+        rest['Menu'] = {"url": menu_link['href']}
     except:
         print("no menu")
-
-    menu_link = menu_area1.find('a', {"class": "xFAlBc"})
-    rest['Menu'] = {"url": menu_link['href']}
 
     phone_area = soup.find(
         'a', {'data-local-attribute': 'd3ph'}
@@ -231,6 +232,8 @@ for i in rest_list:
     rest["closed"] = rest_closed
     # if rest_closed:
     #     print("temporarily closed")
+
+    # print(json.dumps(rest))
 
     output.append(rest)
 

@@ -4,6 +4,7 @@ import csv
 import pandas as pd
 import math
 from webdriver_manager.chrome import ChromeDriverManager
+import json
 
 # this is the actual website being used:::
 
@@ -32,6 +33,7 @@ df = pd.read_csv('restaurants2.csv', usecols=selected_vars)
 first_column = df.iloc[:, 0].tolist()
 first_column
 
+output = []
 
 for index, row in df.iterrows():
 
@@ -82,6 +84,8 @@ for index, row in df.iterrows():
         "//table//tbody//tr"
     )[2].find_elements_by_xpath("//td//table//tbody//tr")
 
+    inspecs = []
+
     for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
         top_row_data = top_row.find_elements_by_tag_name("td")
 
@@ -90,7 +94,10 @@ for index, row in df.iterrows():
         top_row_data[1].click()
         result = hidden_row.find_elements_by_tag_name("td")[1].text
 
-        print(row["name"], date, ":", result.replace("\\n", " "))
+        inspecs.append({"date": date, "desc": result.replace("\\n", " ")})
+
+    output.append({"name": row["name"], "inspecs": inspecs})
+    print(output)
 
     browser.close()
     browser.quit()

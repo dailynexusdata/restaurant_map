@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
+import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Things that would be good to get:
@@ -84,9 +85,8 @@ def get_url(name):
     return f"https://www.google.com/search?q=isla+vista+{name.replace(' ', '+')}"
 
 
-restaurants = open("restaurants.txt", "r")
+restaurants = pd.read_csv("restaurants.csv").name
 rest_list = [line.rstrip('\n') for line in restaurants]
-restaurants.close()
 print(rest_list)
 
 '''
@@ -112,10 +112,9 @@ for i in rest_list:
     order_now_string = soup.find(string="Order Now")
     order_string1 = soup.find(string="$")
     order_string2 = soup.find(string="$$")
-    order_string3 = soup.find(string="Menu")
-    order_string4 = soup.find(string="Phone")
+    rest_closed = soup.find(string="Temporarily closed")
+    stars = soup.find("span", {"class", "Aq14fc"})
 
-    
     if order_string:
         # Find the word "Order inside a <b> tag, then get the parent div"
         try:
@@ -123,11 +122,13 @@ for i in rest_list:
         except:
             order_area = order_string.find_parent("div")
 
+        rest['order'] = []
+
         for anchor in order_area.find_all('a', {'class': 'xFAlBc'}):
             delivery_name = anchor.getText()
             delivery_url = anchor.get('href', '/')
             #dict_order[i].append([f'* {delivery_name}, {delivery_url}'])
-            rest['order'] = {"name": delivery_name, "url": delivery_url}
+            rest['order'].append({"name": delivery_name, "url": delivery_url})
             # = [f'* {delivery_name}, {delivery_url}']
 
     elif order_now_string:
@@ -146,39 +147,32 @@ for i in rest_list:
         rest['price range'] = "no price range found"
 
     # find Menu
-    #try:
-        #browser.find_element_by_xpath(
-            #"//div//span[contains(text(), 'Menu') and @class='xFAlBc']"
-        #).click()
-        
-    #except:
+    # try:
+        # browser.find_element_by_xpath(
+        #"//div//span[contains(text(), 'Menu') and @class='xFAlBc']"
+        # ).click()
+
+    # except:
         #print("couldn't find menu for restaurant", i)
-            
 
     # find menu
+    menu_area = soup.find("div", {"data-attrid": "kc:/local:menu"})
+
     try:
-        order_area5 = order_string3.find_parent("b").find_parent("div")
+        menu_area1 = menu_area.find_parent("b").find_parent("div")
     except:
-        order_area5 = order_string3.find_parent("div")
-        
-    for names in order_area5:
-        menu_found = names.find('div', {"class":"xFAlBc"})
-        rest['Menu'] = {menu_found.find('a')['href']} # causes TYPE ERROR
+        menu_area1 = menu_area.find_parent("div")
 
-    # find phone number
-    try:
-        order_area6 = order_string4.find_parent("b").find_parent("div")
-    except:
-        order_area6 = order_string4.find_parent("div")
+    menu_link = menu_area1.find('a', {"class": "xFAlBc"})
+    rest['Menu'] = {"url": menu_link['href']}  # causes TYPE ERROR
 
-    for item in order_area6:
-        phone_found = item.find('div', {"class":"fl"})
-        rest['Phone Number'] = {phone_found.find('a')['href']} # causes TYPE ERROR
+    phone_area = soup.find(
+        'a', {'data-local-attribute': 'd3ph'})
+    rest['phone_number'] = phone_area.find("span").getText()
 
+    print(rest)
 
-
-
-    # find 
+    # find
     try:
         # for hours:
         try:
@@ -225,6 +219,11 @@ for i in rest_list:
     except:
         print("couldn't find price range for restaurant", i)
     '''
+    if stars:
+        print(stars.getText())
+
+    if rest_closed:
+        print("temporarily closed")
 
     output.append(rest)
 

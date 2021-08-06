@@ -4,6 +4,7 @@ import csv
 import pandas as pd
 import math
 from webdriver_manager.chrome import ChromeDriverManager
+import json
 
 # this is the actual website being used:::
 
@@ -23,7 +24,7 @@ alist = ["woodstock", "freebirds", "starbucks coffee #5332", "buddha bowls", "su
          "hana kitchen", "deja vu", "domino's pizza", "caje"]
 '''
 selected_vars = ['name', 'address']
-df = pd.read_csv('restaurants2.csv', usecols=selected_vars)
+df = pd.read_csv('closed_restaurants.csv', usecols=selected_vars)
 # print(df)
 
 # woodstocks (with an s) wont work
@@ -32,6 +33,7 @@ df = pd.read_csv('restaurants2.csv', usecols=selected_vars)
 first_column = df.iloc[:, 0].tolist()
 first_column
 
+output = []
 
 for index, row in df.iterrows():
 
@@ -74,20 +76,38 @@ for index, row in df.iterrows():
     # check if there is only 1 facility name
     # if there is only 1 facility name then get the first href
     # else:
-    link = browser.find_elements_by_xpath(
-        "//a[@href]")[0].get_attribute("href")
-    browser.get(link)
 
-    rows = browser.find_elements_by_xpath(
-        "//table//tbody//tr"
-    )[2].find_elements_by_xpath("//td//table//tbody//tr")
+    if browser.find_elements_by_xpath("//a[@href]")[0]:
+        
+        link = browser.find_elements_by_xpath(
+            "//a[@href]")[0].get_attribute("href")
+        browser.get(link)
 
-    for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
-        top_row_data = top_row.find_elements_by_tag_name("td")
+        try:
+            rows = browser.find_elements_by_xpath(
+                "//table//tbody//tr"
+            )[2].find_elements_by_xpath("//td//table//tbody//tr")
 
-        date = top_row_data[0].text
+            inspecs = []
 
-        top_row_data[1].click()
-        result = hidden_row.find_elements_by_tag_name("td")[1].text
+            for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
+                top_row_data = top_row.find_elements_by_tag_name("td")
 
-        print(row["name"], date, ":", result.replace("\\n", " "))
+                date = top_row_data[0].text
+
+                top_row_data[1].click()
+                result = hidden_row.find_elements_by_tag_name("td")[1].text
+
+                inspecs.append({"date": date, "desc": result.replace("\\n", " ")})
+
+            output.append({"name": row["name"], "inspecs": inspecs})
+            
+            print(output)
+
+        except:
+            pass
+        
+        #output.append({"name": row["name"], "inspecs": "not found"})
+
+    browser.close()
+    browser.quit()

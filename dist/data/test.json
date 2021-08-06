@@ -1,0 +1,61 @@
+[
+  {
+    "name": "woodstock",
+    "inspecs": [
+      { "date": "03/17/2021", "desc": "No major violations." },
+      { "date": "03/17/2021", "desc": "No major violations." },
+      { "date": "03/03/2021", "desc": "No major violations." },
+      { "date": "03/03/2021", "desc": "No major violations." },
+      { "date": "02/17/2021", "desc": "No major violations." },
+      { "date": "02/17/2021", "desc": "No major violations." },
+      { "date": "01/27/2020", "desc": "No major violations." },
+      { "date": "01/23/2020", "desc": "No major violations." },
+      { "date": "01/09/2020", "desc": "No major violations." },
+      { "date": "01/06/2020", "desc": "No major violations." },
+      { "date": "01/07/2019", "desc": "No major violations." },
+      { "date": "01/04/2019", "desc": "No major violations." },
+      { "date": "12/19/2018", "desc": "No major violations." },
+      { "date": "12/18/2018", "desc": "No major violations." },
+      { "date": "12/14/2017", "desc": "No major violations." },
+      { "date": "12/13/2017", "desc": "No major violations." },
+      { "date": "12/02/2016", "desc": "No major violations." },
+      { "date": "12/01/2016", "desc": "No major violations." },
+      { "date": "09/28/2015", "desc": "No major violations." },
+      { "date": "09/14/2015", "desc": "Hot and cold water available" },
+      { "date": "09/05/2014", "desc": "No major violations." },
+      { "date": "08/05/2013", "desc": "No major violations." },
+      { "date": "07/22/2013", "desc": "No major violations." },
+      { "date": "08/07/2012", "desc": "No major violations." },
+      { "date": "07/26/2012", "desc": "No major violations." },
+      { "date": "07/24/2012", "desc": "No major violations." },
+      { "date": "11/08/2011", "desc": "No major violations." },
+      { "date": "11/07/2011", "desc": "No major violations." },
+      { "date": "09/28/2011", "desc": "No major violations." },
+      {
+        "date": "09/26/2011",
+        "desc": "Hot and cold holding temperatures\nRodents, insects, birds or animals\nFood in good condition, safe and unadulterated"
+      },
+      { "date": "09/26/2011", "desc": "No major violations." },
+      {
+        "date": "09/16/2011",
+        "desc": "Rodents, insects, birds or animals\nHot and cold holding temperatures"
+      },
+      { "date": "06/03/2011", "desc": "No major violations." },
+      { "date": "05/05/2011", "desc": "No major violations." },
+      { "date": "04/25/2011", "desc": "Rodents, insects, birds or animals" },
+      { "date": "04/06/2011", "desc": "No major violations." },
+      { "date": "03/18/2011", "desc": "No major violations." },
+      { "date": "02/04/2010", "desc": "No major violations." },
+      { "date": "01/05/2010", "desc": "No major violations." },
+      { "date": "12/22/2009", "desc": "No major violations." },
+      { "date": "01/14/2009", "desc": "No major violations." },
+      { "date": "12/19/2008", "desc": "No major violations." },
+      { "date": "12/02/2008", "desc": "No major violations." },
+      { "date": "10/14/2008", "desc": "No major violations." },
+      { "date": "09/30/2008", "desc": "No major violations." },
+      { "date": "02/04/2008", "desc": "No major violations." },
+      { "date": "09/25/2007", "desc": "No major violations." },
+      { "date": "09/05/2007", "desc": "No major violations." }
+    ]
+  }
+]

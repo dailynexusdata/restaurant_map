@@ -24,7 +24,7 @@ alist = ["woodstock", "freebirds", "starbucks coffee #5332", "buddha bowls", "su
          "hana kitchen", "deja vu", "domino's pizza", "caje"]
 '''
 selected_vars = ['name', 'address']
-df = pd.read_csv('restaurants2.csv', usecols=selected_vars)
+df = pd.read_csv('closed_restaurants.csv', usecols=selected_vars)
 # print(df)
 
 # woodstocks (with an s) wont work
@@ -80,24 +80,27 @@ for index, row in df.iterrows():
         "//a[@href]")[0].get_attribute("href")
     browser.get(link)
 
-    rows = browser.find_elements_by_xpath(
-        "//table//tbody//tr"
-    )[2].find_elements_by_xpath("//td//table//tbody//tr")
+    try:
+        rows = browser.find_elements_by_xpath(
+            "//table//tbody//tr"
+        )[2].find_elements_by_xpath("//td//table//tbody//tr")
 
-    inspecs = []
+        inspecs = []
 
-    for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
-        top_row_data = top_row.find_elements_by_tag_name("td")
+        for top_row, hidden_row in zip(rows[5::2], rows[6::2]):
+            top_row_data = top_row.find_elements_by_tag_name("td")
 
-        date = top_row_data[0].text
+            date = top_row_data[0].text
 
-        top_row_data[1].click()
-        result = hidden_row.find_elements_by_tag_name("td")[1].text
+            top_row_data[1].click()
+            result = hidden_row.find_elements_by_tag_name("td")[1].text
 
-        inspecs.append({"date": date, "desc": result.replace("\\n", " ")})
+            inspecs.append({"date": date, "desc": result.replace("\\n", " ")})
 
-    output.append({"name": row["name"], "inspecs": inspecs})
-    print(output)
+        output.append({"name": row["name"], "inspecs": inspecs})
+        print(output)
+    except:
+        pass
 
     browser.close()
     browser.quit()

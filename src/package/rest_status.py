@@ -97,7 +97,7 @@ dict_times = {}
 '''
 
 output = []
-for i in ["buddha bowls"]:
+for i in ["woodstock"]:
     rest = {}
 
     url = get_url(i)

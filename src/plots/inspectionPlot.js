@@ -55,6 +55,21 @@ const makeInspectionPlot = (data) => {
     .attr('cx', (d) => x(d.date))
     .attr('cy', y(0.5))
     .attr('r', 2);
+
+  // Other things to look at:
+  const myArr = [1, 2, 3, 4, 5, 6];
+  const squares = null; // use the array .map function to return an array squaring each number in myArr: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  console.log(squares);
+
+  // use .filter() to get the even numbers out of myArr:
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+  const evens = null;
+  console.log(evens);
+
+  // compute the sum of all of the numbers in myArr using .reduce()
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+  const sum = null;
+  console.log(sum);
 };
 
 export default makeInspectionPlot;

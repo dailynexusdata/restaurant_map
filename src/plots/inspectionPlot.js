@@ -55,6 +55,7 @@ const makeInspectionPlot = (data) => {
     .data(data.inspecs)
     .enter()
     .append('circle')
+    .attr('fill', 'green')
     .attr('cx', (d) => x(d.date))
     .attr('cy', (d) => y(d.desc))
     .attr('r', 2);
@@ -66,7 +67,7 @@ const makeInspectionPlot = (data) => {
 
   // use .filter() to get the even numbers out of myArr:
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-  const evens = myArr.filter((d) => d % 2 == 0);
+  const evens = myArr.filter((d) => d % 2 === 0);
   console.log(evens);
 
   // compute the sum of all of the numbers in myArr using .reduce()

@@ -86,7 +86,7 @@ def get_url(name):
     return f"https://www.google.com/search?q=isla+vista+{name.replace(' ', '+')}"
 
 
-restaurants = pd.read_csv("closed_restaurants.csv").name
+restaurants = pd.read_csv("grocery.csv").name
 rest_list = [line.rstrip('\n') for line in restaurants]
 print(rest_list)
 
@@ -97,11 +97,7 @@ dict_times = {}
 '''
 
 output = []
-<<<<<<< HEAD
 for i in rest_list:
-=======
-for i in ["woodstock"]:
->>>>>>> 596707ab746f747e69728deb75d3b9d2ef8a66ba
     rest = {}
 
     url = get_url(i)
@@ -162,7 +158,7 @@ for i in ["woodstock"]:
 
     # find menu
     menu_area = soup.find("div", {"data-attrid": "kc:/local:menu"})
-
+    '''
     try:
         try:
             menu_area1 = menu_area.find_parent("b").find_parent("div")
@@ -173,7 +169,8 @@ for i in ["woodstock"]:
         rest['Menu'] = {"url": menu_link['href']}
     except:
         print("no menu")
-
+    '''
+    
     phone_area = soup.find(
         'a', {'data-local-attribute': 'd3ph'}
     )
@@ -245,6 +242,3 @@ for i in ["woodstock"]:
     browser.quit()
 
 print(output)
-
-
-

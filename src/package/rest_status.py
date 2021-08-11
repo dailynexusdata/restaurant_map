@@ -97,11 +97,7 @@ dict_times = {}
 '''
 
 output = []
-<<<<<<< HEAD
 for i in rest_list:
-=======
-for i in ["woodstock"]:
->>>>>>> 596707ab746f747e69728deb75d3b9d2ef8a66ba
     rest = {}
 
     url = get_url(i)

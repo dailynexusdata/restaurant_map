@@ -241,6 +241,3 @@ for i in rest_list:
     browser.quit()
 
 print(output)
-
-
-

@@ -142,8 +142,6 @@ const makeStars = () => {
     { x: 100, y: 15 },
   ];
 
-  
-
   // TODO: Figure out how much of the stars should be shaded in
 
   // I found this code online on how to make stars
@@ -153,48 +151,44 @@ const makeStars = () => {
 
   // const numberStars = 3.5;
   const ratings = {
-    a : 2.5,
-    b : 4,
-    c : 1,
-    d : 2.5,
-    e : 3
+    a: 2.5,
+    b: 4,
+    c: 1,
+    d: 2.5,
+    e: 3,
   };
 
-  const starTotal = 5;
- 
-  for(const rating in ratings) {  
-    // 2
-    const starPercentage = (ratings[rating] / starTotal) * 100;
-    // 3
-    const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-    // 4
-    document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded; 
-}
+  const starTotal = 2.5;
 
-  // svg
-  //   .selectAll('stars')
-  //   .data(starLocs)
-  //   .enter()
-  //   .each((d, i) => {
-  //     const star = new d3Star();
+  // for (const rating in ratings) {
+  //   // 2
+  //   const starPercentage = (ratings[rating] / starTotal) * 100;
+  //   // 3
+  //   const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+  //   // 4
+  //   document.querySelector(`.${rating} .stars-inner`).style.width =
+  //     starPercentageRounded;
+  // }
 
-  //     // this iterates over each star and we get the index number
-  //     console.log(i);
+  svg
+    .selectAll('stars')
+    .data(starLocs)
+    .enter()
+    .each((d, i) => {
+      console.log({ d, i });
+      const star = new d3Star();
+      const prop = Math.max(Math.min(starTotal - i, 1), 0);
 
-  //     // .value() takes in the proportion of the star to be filled in 0-1
-  //     // figure out this value based on the index (i) and the total (numberStars)
-  //     const prop = 3.5;
+      star
+        .x(d.x)
+        .y(d.y)
+        .size(20)
+        .value(prop)
+        .starColor('#F0CF4C')
+        .borderWidth(0);
 
-  //     star
-  //       .x(d.x)
-  //       .y(d.y)
-  //       .size(20)
-  //       .value(prop)
-  //       .starColor('#F0CF4C')
-  //       .borderWidth(0);
-
-  //     svg.call(star);
-    //});
+      svg.call(star);
+    });
 };
 
 export default makeStars;

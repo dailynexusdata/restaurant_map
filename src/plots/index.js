@@ -10,6 +10,7 @@ import * as d3 from 'd3';
 import makeRestaurantTable from './table';
 import makeInspectionPlot from './inspectionPlot';
 import makeStars from './stars';
+import makeMap from './map';
 
 (async () => {
   // Import JSON file
@@ -35,6 +36,7 @@ import makeStars from './stars';
   makeRestaurantTable();
   makeInspectionPlot(data[0]);
   makeStars();
+  makeMap();
 
   resize();
 })();

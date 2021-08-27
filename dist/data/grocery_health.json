@@ -1,0 +1,244 @@
+[
+  {
+    "name": "Isla Vista Food Cooperative",
+    "inspecs": [
+      { "date": "09/15/2020", "desc": "No major violations." },
+      { "date": "09/11/2020", "desc": "No major violations." },
+      { "date": "09/03/2020", "desc": "No major violations." },
+      { "date": "09/02/2020", "desc": "No major violations." },
+      { "date": "03/29/2019", "desc": "No major violations." },
+      { "date": "03/28/2019", "desc": "No major violations." },
+      { "date": "03/29/2018", "desc": "No major violations." },
+      { "date": "03/28/2018", "desc": "No major violations." },
+      { "date": "05/10/2017", "desc": "No major violations." },
+      { "date": "04/03/2017", "desc": "No major violations." },
+      { "date": "03/31/2017", "desc": "No major violations." },
+      { "date": "06/21/2016", "desc": "No major violations." },
+      { "date": "01/07/2015", "desc": "No major violations." },
+      { "date": "12/19/2014", "desc": "Hot and cold holding temperatures" },
+      { "date": "12/09/2013", "desc": "No major violations." },
+      { "date": "11/19/2013", "desc": "No major violations." },
+      { "date": "11/18/2013", "desc": "No major violations." },
+      { "date": "12/20/2012", "desc": "No major violations." },
+      { "date": "02/28/2012", "desc": "No major violations." },
+      {
+        "date": "02/08/2012",
+        "desc": "Food in good condition, safe and unadulterated"
+      },
+      { "date": "05/04/2011", "desc": "No major violations." },
+      { "date": "04/18/2011", "desc": "No major violations." },
+      { "date": "04/29/2010", "desc": "No major violations." },
+      { "date": "04/09/2010", "desc": "No major violations." },
+      { "date": "03/25/2010", "desc": "No major violations." },
+      { "date": "03/27/2009", "desc": "No major violations." },
+      { "date": "07/22/2008", "desc": "No major violations." },
+      { "date": "07/01/2008", "desc": "No major violations." },
+      { "date": "09/21/2007", "desc": "No major violations." },
+      { "date": "08/30/2007", "desc": "No major violations." }
+    ]
+  },
+  {
+    "name": "Isla Vista Market",
+    "inspecs": [
+      { "date": "02/23/2021", "desc": "No major violations." },
+      { "date": "02/22/2021", "desc": "No major violations." },
+      { "date": "02/07/2020", "desc": "No major violations." },
+      { "date": "02/06/2020", "desc": "No major violations." },
+      { "date": "02/07/2019", "desc": "No major violations." },
+      { "date": "01/23/2019", "desc": "No major violations." },
+      { "date": "01/22/2019", "desc": "No major violations." },
+      { "date": "01/25/2018", "desc": "No major violations." },
+      { "date": "01/24/2018", "desc": "No major violations." },
+      { "date": "11/29/2016", "desc": "No major violations." },
+      { "date": "11/28/2016", "desc": "No major violations." },
+      { "date": "12/01/2015", "desc": "No major violations." },
+      { "date": "11/10/2014", "desc": "No major violations." },
+      { "date": "10/21/2013", "desc": "No major violations." },
+      {
+        "date": "11/19/2012",
+        "desc": "Food in good condition, safe and unadulterated"
+      },
+      { "date": "01/03/2012", "desc": "No major violations." },
+      { "date": "12/02/2011", "desc": "No major violations." },
+      { "date": "07/01/2011", "desc": "No major violations." },
+      { "date": "06/23/2011", "desc": "No major violations." },
+      { "date": "08/09/2010", "desc": "No major violations." },
+      { "date": "07/08/2010", "desc": "No major violations." },
+      { "date": "06/23/2010", "desc": "No major violations." },
+      { "date": "04/09/2009", "desc": "No major violations." },
+      { "date": "03/13/2009", "desc": "No major violations." },
+      { "date": "03/26/2008", "desc": "No major violations." },
+      { "date": "01/04/2007", "desc": "No major violations." }
+    ]
+  },
+  {
+    "name": "Keg N Bottle",
+    "inspecs": [
+      { "date": "03/24/2021", "desc": "No major violations." },
+      { "date": "03/24/2021", "desc": "No major violations." },
+      { "date": "03/05/2021", "desc": "No major violations." },
+      { "date": "03/04/2021", "desc": "No major violations." },
+      { "date": "02/21/2020", "desc": "No major violations." },
+      { "date": "02/19/2020", "desc": "No major violations." },
+      { "date": "01/29/2019", "desc": "No major violations." },
+      { "date": "01/24/2019", "desc": "No major violations." },
+      { "date": "01/30/2018", "desc": "No major violations." },
+      { "date": "01/26/2018", "desc": "No major violations." },
+      { "date": "02/07/2017", "desc": "No major violations." },
+      { "date": "02/03/2017", "desc": "No major violations." },
+      { "date": "01/05/2017", "desc": "No major violations." },
+      { "date": "01/05/2017", "desc": "No major violations." },
+      { "date": "11/22/2016", "desc": "No major violations." },
+      { "date": "11/18/2016", "desc": "No major violations." },
+      { "date": "03/19/2015", "desc": "No major violations." },
+      { "date": "05/05/2014", "desc": "No major violations." },
+      {
+        "date": "04/21/2014",
+        "desc": "Hot and cold holding temperatures\nFood in good condition, safe and unadulterated"
+      },
+      { "date": "06/20/2013", "desc": "No major violations." },
+      { "date": "05/28/2013", "desc": "No major violations." },
+      {
+        "date": "05/10/2013",
+        "desc": "Sewage and wastewater properly disposed\nFood obtained from approved source"
+      },
+      { "date": "07/09/2012", "desc": "No major violations." },
+      { "date": "06/21/2012", "desc": "No major violations." },
+      { "date": "06/14/2012", "desc": "No major violations." },
+      { "date": "05/23/2012", "desc": "No major violations." },
+      { "date": "07/25/2011", "desc": "No major violations." },
+      { "date": "07/14/2011", "desc": "No major violations." },
+      { "date": "06/29/2011", "desc": "No major violations." },
+      { "date": "04/09/2010", "desc": "No major violations." },
+      { "date": "04/07/2010", "desc": "No major violations." },
+      {
+        "date": "04/02/2010",
+        "desc": "Hot and cold holding temperatures\nRodents, insects, birds or animals"
+      },
+      {
+        "date": "03/11/2010",
+        "desc": "Rodents, insects, birds or animals\nFood in good condition, safe and unadulterated"
+      },
+      { "date": "03/18/2009", "desc": "No major violations." },
+      { "date": "02/18/2009", "desc": "No major violations." },
+      { "date": "03/20/2008", "desc": "No major violations." },
+      { "date": "03/19/2008", "desc": "No major violations." },
+      { "date": "03/06/2007", "desc": "No major violations." },
+      { "date": "02/01/2007", "desc": "No major violations." }
+    ]
+  },
+  {
+    "name": "Six Pak Shop",
+    "inspecs": [
+      { "date": "11/05/2020", "desc": "No major violations." },
+      { "date": "10/23/2020", "desc": "No major violations." },
+      { "date": "10/22/2020", "desc": "No major violations." },
+      { "date": "11/04/2019", "desc": "No major violations." },
+      { "date": "07/24/2018", "desc": "No major violations." },
+      { "date": "07/13/2018", "desc": "No major violations." },
+      {
+        "date": "07/13/2018",
+        "desc": "Hands clean and properly washed; proper glove use\nAdequate handwashing facilities available and accessible\nHot and cold holding temperatures\nCooling methods\nFood contact surfaces: clean and sanitized"
+      },
+      { "date": "07/10/2018", "desc": "No major violations." },
+      {
+        "date": "07/09/2018",
+        "desc": "Hands clean and properly washed; proper glove use\nAdequate handwashing facilities available and accessible\nHot and cold holding temperatures\nFood contact surfaces: clean and sanitized"
+      },
+      { "date": "01/10/2018", "desc": "No major violations." },
+      { "date": "07/07/2017", "desc": "No major violations." },
+      { "date": "07/05/2017", "desc": "No major violations." },
+      { "date": "02/16/2016", "desc": "No major violations." },
+      { "date": "01/27/2016", "desc": "No major violations." },
+      { "date": "01/26/2016", "desc": "No major violations." },
+      { "date": "01/25/2016", "desc": "No major violations." },
+      { "date": "11/03/2014", "desc": "No major violations." },
+      { "date": "10/21/2014", "desc": "No major violations." },
+      { "date": "10/20/2014", "desc": "No major violations." },
+      { "date": "10/10/2014", "desc": "No major violations." },
+      {
+        "date": "10/09/2014",
+        "desc": "Hot and cold holding temperatures\nFood in good condition, safe and unadulterated"
+      },
+      { "date": "12/05/2013", "desc": "No major violations." },
+      {
+        "date": "11/12/2013",
+        "desc": "Hot and cold holding temperatures\nCooling methods"
+      },
+      { "date": "01/22/2013", "desc": "No major violations." },
+      { "date": "01/11/2013", "desc": "Hot and cold water available" },
+      { "date": "11/09/2011", "desc": "No major violations." },
+      { "date": "10/25/2011", "desc": "No major violations." },
+      { "date": "12/16/2010", "desc": "No major violations." },
+      { "date": "08/09/2010", "desc": "No major violations." },
+      { "date": "06/09/2010", "desc": "No major violations." },
+      { "date": "04/19/2010", "desc": "No major violations." },
+      { "date": "04/07/2010", "desc": "No major violations." },
+      { "date": "03/03/2010", "desc": "No major violations." },
+      {
+        "date": "12/08/2009",
+        "desc": "Hot and cold holding temperatures\nFood in good condition, safe and unadulterated"
+      },
+      {
+        "date": "11/24/2009",
+        "desc": "Hot and cold holding temperatures\nFood in good condition, safe and unadulterated"
+      },
+      { "date": "01/18/2008", "desc": "No major violations." },
+      { "date": "01/03/2008", "desc": "No major violations." },
+      { "date": "01/02/2008", "desc": "No major violations." },
+      { "date": "12/28/2007", "desc": "No major violations." }
+    ]
+  },
+  {
+    "name": "7-Eleven",
+    "inspecs": [
+      { "date": "11/12/2020", "desc": "No major violations." },
+      { "date": "11/10/2020", "desc": "No major violations." },
+      { "date": "12/10/2019", "desc": "No major violations." },
+      { "date": "12/10/2019", "desc": "No major violations." },
+      { "date": "12/26/2018", "desc": "No major violations." },
+      { "date": "12/20/2018", "desc": "Hot and cold holding temperatures" },
+      { "date": "12/12/2018", "desc": "No major violations." },
+      {
+        "date": "12/10/2018",
+        "desc": "Hands clean and properly washed; proper glove use\nHot and cold holding temperatures"
+      },
+      { "date": "12/13/2017", "desc": "No major violations." },
+      { "date": "12/12/2017", "desc": "No major violations." },
+      { "date": "11/15/2016", "desc": "No major violations." },
+      { "date": "11/10/2016", "desc": "No major violations." },
+      { "date": "10/27/2016", "desc": "No major violations." },
+      { "date": "10/26/2016", "desc": "Hot and cold holding temperatures" },
+      { "date": "10/12/2015", "desc": "Hot and cold holding temperatures" },
+      {
+        "date": "09/14/2015",
+        "desc": "Hot and cold water available\nHot and cold holding temperatures"
+      },
+      { "date": "12/31/2014", "desc": "No major violations." },
+      { "date": "12/17/2014", "desc": "No major violations." },
+      { "date": "09/17/2014", "desc": "No major violations." },
+      {
+        "date": "09/03/2014",
+        "desc": "Food contact surfaces: clean and sanitized"
+      },
+      { "date": "08/09/2013", "desc": "No major violations." },
+      { "date": "07/19/2013", "desc": "No major violations." },
+      {
+        "date": "07/18/2013",
+        "desc": "Sewage and wastewater properly disposed\nHot and cold water available"
+      },
+      { "date": "08/09/2012", "desc": "No major violations." },
+      { "date": "07/26/2012", "desc": "No major violations." },
+      { "date": "09/06/2011", "desc": "No major violations." },
+      { "date": "08/23/2011", "desc": "No major violations." },
+      { "date": "09/27/2010", "desc": "No major violations." },
+      { "date": "09/13/2010", "desc": "No major violations." },
+      { "date": "08/17/2009", "desc": "No major violations." },
+      { "date": "07/28/2009", "desc": "No major violations." },
+      { "date": "07/18/2008", "desc": "No major violations." },
+      { "date": "07/01/2008", "desc": "No major violations." },
+      { "date": "09/25/2007", "desc": "No major violations." },
+      { "date": "08/31/2007", "desc": "No major violations." }
+    ]
+  }
+]

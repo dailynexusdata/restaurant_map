@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
-#import json
+import json
 
 # Things that would be good to get:
 # get reviews?
@@ -241,3 +241,6 @@ for i in rest_list:
     browser.quit()
 
 print(output)
+
+with open("../../dist/data/status.json", "w") as outfile:
+    json.dump(output, outfile)

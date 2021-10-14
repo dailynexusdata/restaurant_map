@@ -1,8 +1,8 @@
 import * as d3 from 'd3';
 
-function d3Star() {
+function D3Star() {
   // https://bl.ocks.org/Lulkafe/77fbdf8bfdb443218121bcaf44609425
-  let size = 20;
+  let size = 2;
   let x = 0;
   let y = 0;
   let value = 1.0; // Range is 0.0 - 1.0
@@ -56,21 +56,21 @@ function d3Star() {
 
     // Rect for clipping
     // In order to avoid potential ID duplicates for clipping, clip-path is not used here
-    selection
-      .append('rect')
-      .attr('x', x + size * value)
-      .attr('y', y - h)
-      .attr('width', size - size * value)
-      .attr('height', size)
-      .style('fill', backgroundColor);
+    // selection
+    //   .append('rect')
+    //   .attr('x', x + size * value)
+    //   .attr('y', y - h)
+    //   .attr('width', size - size * value)
+    //   .attr('height', size)
+    //   .style('fill', backgroundColor);
 
     // border of the star
-    selection
-      .append('path')
-      .attr('d', line(coordinates))
-      .style('stroke-width', borderWidth)
-      .style('fill', 'none')
-      .style('stroke', borderColor);
+    // selection
+    //   .append('path')
+    //   .attr('d', line(coordinates))
+    //   .style('stroke-width', borderWidth)
+    //   .style('fill', 'none')
+    //   .style('stroke', borderColor);
   }
 
   star.x = function (val) {
@@ -122,66 +122,4 @@ function d3Star() {
   return star;
 }
 
-const makeStars = () => {
-  const container = d3.select('#stars');
-
-  const size = {
-    width: 130,
-    height: 30,
-  };
-
-  const svg = container.append('svg').attr('width', size.width).attr('height', size.height);
-
-  const starLocs = [
-    { x: 10, y: 15 },
-    { x: 40, y: 15 },
-    { x: 70, y: 15 },
-    { x: 100, y: 15 },
-  ];
-
-  // TODO: Figure out how much of the stars should be shaded in
-
-  // I found this code online on how to make stars
-  // I have it setup rn so that there's 4 stars that are fully filled in
-
-  // I want to have a number passed in like 3.5 stars and color the stars accordingly
-
-  // const numberStars = 3.5;
-  const ratings = {
-    a: 2.5,
-    b: 4,
-    c: 1,
-    d: 2.5,
-    e: 3,
-  };
-
-  const starTotal = 2.5;
-
-  // for (const rating in ratings) {
-  //   // 2
-  //   const starPercentage = (ratings[rating] / starTotal) * 100;
-  //   // 3
-  //   const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-  //   // 4
-  //   document.querySelector(`.${rating} .stars-inner`).style.width =
-  //     starPercentageRounded;
-  // }
-
-  svg
-    .selectAll('stars')
-    .data(starLocs)
-    .enter()
-    .each((d, i) => {
-      // console.log({ d, i });
-      const star = new d3Star();
-      const prop = Math.max(Math.min(starTotal - i, 1), 0);
-
-      star.x(d.x).y(d.y).size(20).value(prop)
-        .starColor('#F0CF4C')
-        .borderWidth(0);
-
-      svg.call(star);
-    });
-};
-
-export default makeStars;
+export default D3Star;

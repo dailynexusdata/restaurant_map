@@ -6,6 +6,11 @@ import math
 from webdriver_manager.chrome import ChromeDriverManager
 import json
 
+# ISSUES WITH:
+# > starbucks
+# > blenders
+# > spudnuts
+
 # this is the actual website being used:::
 
 url = "https://pressagent.envisionconnect.com/main.phtml?agency=sbc"
@@ -24,7 +29,7 @@ alist = ["woodstock", "freebirds", "starbucks coffee #5332", "buddha bowls", "su
          "hana kitchen", "deja vu", "domino's pizza", "caje"]
 '''
 selected_vars = ['name', 'address']
-df = pd.read_csv('closed_restaurants.csv', usecols=selected_vars)
+df = pd.read_csv('restaurants2.csv', usecols=selected_vars)
 # print(df)
 
 # woodstocks (with an s) wont work
@@ -78,7 +83,7 @@ for index, row in df.iterrows():
     # else:
 
     if browser.find_elements_by_xpath("//a[@href]")[0]:
-        
+
         link = browser.find_elements_by_xpath(
             "//a[@href]")[0].get_attribute("href")
         browser.get(link)
@@ -98,16 +103,20 @@ for index, row in df.iterrows():
                 top_row_data[1].click()
                 result = hidden_row.find_elements_by_tag_name("td")[1].text
 
-                inspecs.append({"date": date, "desc": result.replace("\\n", " ")})
+                inspecs.append(
+                    {"date": date, "desc": result.replace("\\n", " ")})
 
             output.append({"name": row["name"], "inspecs": inspecs})
-            
+
             print(output)
 
         except:
             pass
-        
+
         #output.append({"name": row["name"], "inspecs": "not found"})
 
     browser.close()
     browser.quit()
+
+with open("../../dist/data/health.json", "w") as outfile:
+    json.dump(output, outfile)

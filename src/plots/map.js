@@ -1,64 +1,21 @@
 import * as d3 from 'd3';
 import * as L from 'leaflet';
+import GetMap from './getMapClass';
 import 'leaflet/dist/leaflet.css';
+import StarSection from './starSection';
 
-const restaurants = [
-  {
-    name: 'freebirds',
-    label: 'woodstock',
-    lat: '34.41218902131045',
-    lng: '-119.85517501831055',
-  },
-  { name: 'freebirds', lat: '34.4131939050892', lng: '-119.8556685447693' },
-  { name: 'habit', lat: '34.413185053977315', lng: '-119.8550918698311' },
-  {
-    name: 'buddhabowls',
-    lat: '34.412895179545664',
-    lng: '-119.85719472169878',
-  },
-  {
-    name: 'freebirds',
-    label: 'iv bagel',
-    lat: '34.410967820946304',
-    lng: '-119.85706061124803',
-  },
-  {
-    name: 'freebirds',
-    label: 'iv bagel',
-    lat: '34.412844008859445',
-    lng: '-119.85780358314516',
-  },
-  {
-    lat: '34.413187266755365',
-    lng: '-119.85479146242143',
-    name: 'freebirds',
-  },
-  { name: 'freebirds', lat: '34.41158077447897', lng: '-119.85634446144105' },
-];
+const wait = async (timeSleep) => new Promise((resolve) => {
+  setTimeout(() => {
+    resolve();
+  }, timeSleep);
+});
 
-const simpleMap = L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
-  {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19,
-  },
-);
-const satelliteMap = L.tileLayer(
-  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-  {
-    attribution:
-      'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-  },
-);
-
-const makePlot = () => {
+const makePlot = (restaurants) => {
   const container = d3.select('#restaurant-map');
 
   const size = {
-    height: 400,
-    width: Math.min(600, window.innerWidth - 40),
+    height: 800,
+    width: Math.min(800, window.innerWidth - 40),
   };
 
   container
@@ -67,94 +24,90 @@ const makePlot = () => {
     .style('height', `${size.height}px`)
     .style('width', `${size.width}px`);
 
-  const map = L.map('restaurant-delivery-map').setView(
+  const [map, svg] = new GetMap(
+    'restaurant-delivery-map',
+    true,
     [34.41226370342688, -119.85621571540833],
     17,
+    { zoomControl: false },
   );
 
-  map.addLayer(simpleMap);
-  L.svg().addTo(map);
-  //   document.getElementById('changeMap').addEventListener('change', (e) => {
-  //     const val = e.target.value;
-  //     if (val === 'on') {
-  //       mymap.removeLayer(simpleMap);
-  //       mymap.addLayer(satelliteMap);
-  //     } else {
-  //       mymap.removeLayer(satelliteMap);
-  //       mymap.addLayer(simpleMap);
-  //     }
-  //     e.target.value = val === 'on' ? 'off' : 'on';
-  //   });
+  const topRests = ['buddha bowls', 'woodstocks', 'habit', 'freebirds'];
 
-  const overlay = d3.select(map.getPanes().overlayPane);
-  const svg = overlay.select('svg');
-
-  const height = 50;
   const update = () => {
-    svg.selectAll('image').remove();
-    restaurants.forEach((rest) => {
-      const ll = new L.latLng(rest.lat, rest.lng);
-      const x = map.latLngToLayerPoint(ll).x - height / 2;
-      const y = map.latLngToLayerPoint(ll).y - height;
-      const r = svg
-        .append('image')
-        .attr('x', x)
-        .attr('y', y)
-        .style('width', `${height}px`)
-        .style('height', `${height}px`)
-        .attr('xlink:href', `dist/img/${'buddhabowls'}.png`)
-        .attr('pointer-events', 'visible');
+    svg.selectAll('*').remove();
+    restaurants
+      .sort((a, b) => (topRests.includes(a) ? 1 : topRests.includes(b) ? 1 : -1))
+      .filter((d) => d.lat)
+      .forEach((rest) => {
+        const height = topRests.includes(rest.name) ? 60 : Math.random() * 15 + 30;
 
-      r.on('click', (event, d) => {
-        const [x, y] = d3.pointer(event);
-        console.log('clicked');
+        const ll = new L.latLng(rest.lat, rest.lng);
+        const x = map.latLngToLayerPoint(ll).x - height / 2;
+        const y = map.latLngToLayerPoint(ll).y - height;
+        console.log(rest);
 
-        // r.attr('x', x);
-        // r.attr('y', y);
+        const href = topRests.includes(rest.name)
+          ? `dist/img/${rest.name}.png`
+          : `dist/img/random${Math.round(Math.random())}.png`;
 
-        map.dragging.disable();
+        const r = svg
+          .append('image')
+          .attr('x', x)
+          .attr('y', y)
+          .style('width', `${height}px`)
+          .style('height', `${height}px`)
+          .attr('xlink:href', href)
+          .attr('pointer-events', 'visible');
+
+        if (rest.stars) {
+          console.log('HEREREREAASDs');
+          const starG = svg.append('foreignObject');
+          console.log(rest.stars);
+          const [starSvg, starSize] = StarSection(starG, +rest.stars, rest.name);
+          starG.attr(
+            'transform',
+            `translate(${map.latLngToLayerPoint(ll).x - starSize.width / 2}, ${
+              y - starSize.height + 5
+            })`,
+          );
+          starG.raise();
+        }
+        r.on('click', (event, d) => {
+          const [x, y] = d3.pointer(event);
+          console.log('clicked');
+
+          // r.attr('x', x);
+          // r.attr('y', y);
+
+          map.dragging.disable();
+        });
+
+        r.on('mouseenter', async () => {
+          console.log(rest.name);
+          const playing = true;
+          let i = 0;
+          const timeSleep = 5;
+          for (; i < 5; ++i) {
+            r.attr('y', y + i);
+            await wait(timeSleep);
+          }
+          for (; i > -5; --i) {
+            r.attr('y', y + i);
+            await wait(timeSleep);
+          }
+          for (; i <= 0; ++i) {
+            r.attr('y', y + i);
+            await wait(timeSleep);
+          }
+        });
       });
-
-      r.on('mouseenter', async () => {
-        // console.log(rest.name);
-        const playing = true;
-
-        // await new Promise((resolve) => {
-        // const interval = setInterval(async () => {
-        let i = 0;
-        const timeSleep = 5;
-        for (; i < 5; ++i) {
-          r.attr('y', y + i);
-
-          await new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-            }, timeSleep);
-          });
-        }
-        for (; i > -5; --i) {
-          r.attr('y', y + i);
-
-          await new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-            }, timeSleep);
-          });
-        }
-        for (; i <= 0; ++i) {
-          r.attr('y', y + i);
-
-          await new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-            }, timeSleep);
-          });
-        }
-      });
-    });
   };
 
   map.on('moveend', update);
+  map.on('click', (d) => {
+    console.log(d.latlng);
+  });
   update();
 };
 

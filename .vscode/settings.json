@@ -1,4 +1,7 @@
 {
     "python.pythonPath": "src\\myenv\\Scripts\\python.exe",
-    "liveServer.settings.port": 5504
+    "liveServer.settings.port": 5505,
+    "files.watcherExclude": {
+        "**/target": true
+    }
 }

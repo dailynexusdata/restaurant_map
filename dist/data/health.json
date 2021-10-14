@@ -38,7 +38,7 @@
       { "date": "09/26/2011", "desc": "No major violations." },
       {
         "date": "09/16/2011",
-        "desc": "Rodents, insects, birds or animals\nHot and cold holding temperatures"
+        "desc": "Hot and cold holding temperatures\nRodents, insects, birds or animals"
       },
       { "date": "06/03/2011", "desc": "No major violations." },
       { "date": "05/05/2011", "desc": "No major violations." },
@@ -107,43 +107,6 @@
     ]
   },
   {
-    "name": "starbucks",
-    "inspecs": [
-      { "date": "08/02/2021", "desc": "No major violations." },
-      {
-        "date": "11/20/2020",
-        "desc": "Hands clean and properly washed; proper glove use"
-      },
-      { "date": "10/29/2020", "desc": "No major violations." },
-      { "date": "10/28/2020", "desc": "No major violations." },
-      { "date": "11/22/2019", "desc": "No major violations." },
-      { "date": "11/22/2019", "desc": "No major violations." },
-      { "date": "11/14/2019", "desc": "No major violations." },
-      { "date": "11/01/2018", "desc": "No major violations." },
-      { "date": "10/31/2018", "desc": "No major violations." },
-      { "date": "10/30/2018", "desc": "No major violations." },
-      { "date": "10/26/2017", "desc": "No major violations." },
-      { "date": "10/26/2017", "desc": "No major violations." },
-      { "date": "10/03/2016", "desc": "No major violations." },
-      { "date": "10/03/2016", "desc": "No major violations." },
-      { "date": "09/22/2015", "desc": "No major violations." },
-      { "date": "09/08/2014", "desc": "No major violations." },
-      { "date": "07/25/2013", "desc": "No major violations." },
-      { "date": "07/24/2013", "desc": "No major violations." },
-      { "date": "07/27/2012", "desc": "No major violations." },
-      { "date": "09/07/2011", "desc": "No major violations." },
-      { "date": "09/06/2011", "desc": "Hot and cold holding temperatures" },
-      { "date": "12/17/2010", "desc": "No major violations." },
-      { "date": "12/15/2010", "desc": "No major violations." },
-      { "date": "09/02/2009", "desc": "No major violations." },
-      { "date": "10/14/2008", "desc": "No major violations." },
-      { "date": "09/23/2008", "desc": "No major violations." },
-      { "date": "12/11/2007", "desc": "No major violations." },
-      { "date": "11/14/2007", "desc": "No major violations." },
-      { "date": "10/26/2007", "desc": "No major violations." }
-    ]
-  },
-  {
     "name": "buddha bowls",
     "inspecs": [
       { "date": "04/02/2021", "desc": "No major violations." },
@@ -207,7 +170,7 @@
       { "date": "10/22/2012", "desc": "No major violations." },
       {
         "date": "10/15/2012",
-        "desc": "Food in good condition, safe and unadulterated\nHot and cold holding temperatures"
+        "desc": "Hot and cold holding temperatures\nFood in good condition, safe and unadulterated"
       },
       { "date": "06/19/2012", "desc": "No major violations." },
       { "date": "06/01/2012", "desc": "No major violations." },
@@ -306,7 +269,7 @@
       { "date": "02/13/2020", "desc": "No major violations." },
       {
         "date": "02/12/2020",
-        "desc": "Hot and cold holding temperatures\nHands clean and properly washed; proper glove use"
+        "desc": "Hands clean and properly washed; proper glove use\nHot and cold holding temperatures"
       },
       { "date": "02/05/2019", "desc": "No major violations." },
       { "date": "01/31/2019", "desc": "No major violations." },
@@ -328,11 +291,11 @@
       { "date": "11/13/2013", "desc": "No major violations." },
       {
         "date": "11/08/2013",
-        "desc": "Food in good condition, safe and unadulterated\nHot and cold holding temperatures"
+        "desc": "Hot and cold holding temperatures\nFood in good condition, safe and unadulterated"
       },
       {
         "date": "10/25/2013",
-        "desc": "Cooling methods\nHot and cold holding temperatures\nFood in good condition, safe and unadulterated"
+        "desc": "Food in good condition, safe and unadulterated\nCooling methods\nHot and cold holding temperatures"
       },
       { "date": "12/11/2012", "desc": "No major violations." },
       { "date": "12/04/2012", "desc": "Cooling methods" },
@@ -354,6 +317,11 @@
   {
     "name": "sizzling lunch",
     "inspecs": [
+      {
+        "date": "09/15/2021",
+        "desc": "Hands clean and properly washed; proper glove use"
+      },
+      { "date": "09/15/2021", "desc": "No major violations." },
       { "date": "02/10/2021", "desc": "No major violations." },
       { "date": "01/21/2020", "desc": "No major violations." },
       { "date": "01/17/2020", "desc": "No major violations." },
@@ -442,12 +410,12 @@
       { "date": "08/29/2019", "desc": "No major violations." },
       {
         "date": "08/28/2019",
-        "desc": "Hot and cold holding temperatures\nFood contact surfaces: clean and sanitized"
+        "desc": "Food contact surfaces: clean and sanitized\nHot and cold holding temperatures"
       },
       { "date": "10/01/2018", "desc": "No major violations." },
       {
         "date": "09/28/2018",
-        "desc": "Food contact surfaces: clean and sanitized\nHot and cold holding temperatures"
+        "desc": "Hot and cold holding temperatures\nFood contact surfaces: clean and sanitized"
       },
       { "date": "09/04/2018", "desc": "No major violations." },
       { "date": "09/28/2017", "desc": "No major violations." },
@@ -468,7 +436,7 @@
       { "date": "01/10/2013", "desc": "No major violations." },
       {
         "date": "12/14/2012",
-        "desc": "Hot and cold holding temperatures\nFood contact surfaces: clean and sanitized\nAdequate handwashing facilities available and accessible"
+        "desc": "Adequate handwashing facilities available and accessible\nFood contact surfaces: clean and sanitized\nHot and cold holding temperatures"
       },
       { "date": "12/10/2012", "desc": "No major violations." },
       { "date": "02/01/2012", "desc": "No major violations." },
@@ -487,6 +455,7 @@
   {
     "name": "hana kitchen",
     "inspecs": [
+      { "date": "07/08/2021", "desc": "No major violations." },
       { "date": "02/17/2021", "desc": "No major violations." },
       { "date": "02/17/2021", "desc": "No major violations." },
       { "date": "02/10/2021", "desc": "No major violations." },
@@ -505,21 +474,21 @@
       { "date": "01/07/2019", "desc": "No major violations." },
       {
         "date": "01/03/2019",
-        "desc": "Hot and cold holding temperatures\nFood contact surfaces: clean and sanitized"
+        "desc": "Food contact surfaces: clean and sanitized\nHot and cold holding temperatures"
       },
       { "date": "01/18/2018", "desc": "No major violations." },
       { "date": "01/12/2018", "desc": "No major violations." },
       { "date": "12/20/2017", "desc": "No major violations." },
       {
         "date": "12/19/2017",
-        "desc": "Food contact surfaces: clean and sanitized\nHot and cold holding temperatures"
+        "desc": "Hot and cold holding temperatures\nFood contact surfaces: clean and sanitized"
       },
       { "date": "01/12/2017", "desc": "No major violations." },
       { "date": "01/11/2017", "desc": "No major violations." },
       { "date": "12/02/2016", "desc": "No major violations." },
       {
         "date": "12/01/2016",
-        "desc": "Food contact surfaces: clean and sanitized\nHands clean and properly washed; proper glove use\nFood in good condition, safe and unadulterated"
+        "desc": "Hands clean and properly washed; proper glove use\nFood contact surfaces: clean and sanitized\nFood in good condition, safe and unadulterated"
       },
       { "date": "11/09/2015", "desc": "No major violations." },
       { "date": "10/26/2015", "desc": "Hot and cold holding temperatures" },
@@ -550,7 +519,7 @@
       { "date": "09/08/2011", "desc": "No major violations." },
       {
         "date": "09/07/2011",
-        "desc": "Food in good condition, safe and unadulterated\nFood contact surfaces: clean and sanitized\nCooling methods\nHot and cold holding temperatures"
+        "desc": "Hot and cold holding temperatures\nCooling methods\nFood contact surfaces: clean and sanitized\nFood in good condition, safe and unadulterated"
       },
       { "date": "09/28/2010", "desc": "No major violations." },
       { "date": "09/21/2010", "desc": "No major violations." },
@@ -618,6 +587,7 @@
     "name": "domino's pizza",
     "inspecs": [
       { "date": "07/20/2021", "desc": "No major violations." },
+      { "date": "07/20/2021", "desc": "No major violations." },
       { "date": "12/23/2020", "desc": "No major violations." },
       { "date": "12/16/2020", "desc": "No major violations." },
       { "date": "12/15/2020", "desc": "No major violations." }
@@ -680,6 +650,7 @@
   {
     "name": "blenders in the grass",
     "inspecs": [
+      { "date": "08/13/2021", "desc": "No major violations." },
       { "date": "08/13/2021", "desc": "No major violations." },
       { "date": "11/20/2020", "desc": "No major violations." },
       { "date": "11/20/2020", "desc": "No major violations." },
@@ -805,6 +776,8 @@
   {
     "name": "Pizza My Heart",
     "inspecs": [
+      { "date": "09/13/2021", "desc": "No major violations." },
+      { "date": "09/13/2021", "desc": "No major violations." },
       { "date": "10/02/2020", "desc": "No major violations." },
       { "date": "09/30/2020", "desc": "No major violations." },
       { "date": "03/29/2019", "desc": "No major violations." },
@@ -873,6 +846,8 @@
     "name": "Spudnuts",
     "inspecs": [
       { "date": "08/19/2021", "desc": "No major violations." },
+      { "date": "08/19/2021", "desc": "No major violations." },
+      { "date": "07/30/2021", "desc": "No major violations." },
       { "date": "07/30/2021", "desc": "No major violations." },
       { "date": "12/09/2020", "desc": "No major violations." },
       { "date": "12/04/2020", "desc": "No major violations." },

@@ -86,7 +86,7 @@ def get_url(name):
     return f"https://www.google.com/search?q=isla+vista+{name.replace(' ', '+')}"
 
 
-restaurants = pd.read_csv("grocery.csv").name
+restaurants = pd.read_csv("restaurants.csv").name
 rest_list = [line.rstrip('\n') for line in restaurants]
 print(rest_list)
 
@@ -170,7 +170,7 @@ for i in rest_list:
     except:
         print("no menu")
     '''
-    
+
     phone_area = soup.find(
         'a', {'data-local-attribute': 'd3ph'}
     )
@@ -231,6 +231,7 @@ for i in rest_list:
         rest["stars"] = stars.getText()
 
     rest["closed"] = rest_closed
+    rest['name'] = i
     # if rest_closed:
     #     print("temporarily closed")
 

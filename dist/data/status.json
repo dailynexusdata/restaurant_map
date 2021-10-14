@@ -1,131 +1,480 @@
 [
   {
-    "price range": "$",
-    "Menu": { "url": "http://blazepizza.com/menu" },
-    "phone_number": "(805) 221-1901",
-    "stars": "4.4",
-    "closed": null
-  },
-  {
-    "price range": "$",
-    "phone_number": "(805) 845-0972",
-    "stars": "4.4",
-    "closed": null
-  },
-  {
-    "price range": "no price range found",
-    "phone_number": "(805) 968-7441",
-    "stars": "4.1",
-    "closed": null
-  },
-  {
-    "price range": "no price range found",
-    "phone_number": "(805) 770-7737",
-    "stars": "3.9",
-    "closed": null
-  },
-  {
     "price range": "$$",
-    "Menu": {
-      "url": "http://places.singleplatform.com/el-sitio-14/menu?ref=google"
-    },
-    "phone_number": "(805) 685-5015",
-    "stars": "4.3",
-    "closed": null
-  },
-  {
-    "price range": "$$",
-    "Menu": {
-      "url": "http://www.urbanspoon.com/cities/69-santa-barbara/restaurants/740279-giovanni-s/menu?utm_source=Google&utm_medium=Local&utm_campaign=GoogleMenus"
-    },
-    "phone_number": "(805) 968-2254",
-    "stars": "3.2",
-    "closed": null
-  },
-  {
-    "order": [
-      {
-        "name": "seamless.com",
-        "url": "https://www.seamless.com/menu/ikes-love--sandwiches-1936-state-st-santa-barbara/1235785?utm_source=google&utm_medium=organic&utm_campaign=place-action-link"
-      },
-      {
-        "name": "ubereats.com",
-        "url": "https://www.ubereats.com/store/ikes-place-santa-barbara/DkDau44BSCepHFZyKG_0Tw/?utm_source=google&utm_medium=organic&utm_campaign=place-action-link"
-      },
-      {
-        "name": "grubhub.com",
-        "url": "https://www.grubhub.com/restaurant/ikes-love--sandwiches-1936-state-st-santa-barbara/1235785?utm_source=google&utm_medium=organic&utm_campaign=place-action-link"
-      },
-      {
-        "name": "postmates.com",
-        "url": "https://www.postmates.com/store/ikes-place-santa-barbara/DkDau44BSCepHFZyKG_0Tw/?utm_source=google&utm_medium=organic&utm_campaign=place-action-link"
-      }
-    ],
-    "Menu": {
-      "url": "http://places.singleplatform.com/ikes-love--sandwiches-21/menu?ref=google"
-    },
-    "phone_number": "(805) 837-8857",
+    "Menu": { "url": "http://orders.woodstocksiv.com/" },
+    "phone_number": "(805) 968-6969",
     "hours": [
-      { "day": "Thursday", "time": "10AM\u20136PM" },
-      { "day": "Friday", "time": "10AM\u20136PM" },
-      { "day": "Saturday", "time": "10AM\u20136PM" },
-      { "day": "Sunday", "time": "10AM\u20136PM" },
-      { "day": "Monday", "time": "10AM\u20136PM" },
-      { "day": "Tuesday", "time": "10AM\u20136PM" },
-      { "day": "Wednesday", "time": "10AM\u20136PM" }
+      { "day": "Monday", "time": "11AM-11PM" },
+      { "day": "Tuesday", "time": "11AM-11PM" },
+      { "day": "Wednesday", "time": "11AM-11PM" },
+      { "day": "Thursday", "time": "11AM-11PM" },
+      { "day": "Friday", "time": "11AM-12AM" },
+      { "day": "Saturday", "time": "11AM-12AM" },
+      { "day": "Sunday", "time": "11AM-11PM" }
     ],
-    "stars": "4.1",
-    "closed": null
+    "stars": "4.5",
+    "closed": null,
+    "name": "woodstocks",
+    "lat": 34.41223825619469,
+    "lng": -119.85519826434032
   },
   {
     "price range": "no price range found",
-    "phone_number": "(805) 637-9825",
-    "stars": "3.3",
-    "closed": null
-  },
-  { "price range": "no price range found", "closed": null },
-  {
-    "price range": "$$",
-    "Menu": { "url": "https://www.silvergreens.com/menu" },
-    "phone_number": "(805) 961-1700",
-    "stars": "4.1",
-    "closed": null
-  },
-  {
-    "price range": "no price range found",
-    "phone_number": "(805) 324-4367",
-    "stars": "4.8",
-    "closed": null
-  },
-  {
-    "price range": "$$",
-    "Menu": { "url": "https://islavista.southcoastdeli.com/" },
-    "phone_number": "(805) 770-2669",
+    "Menu": {
+      "url": "http://places.singleplatform.com/freebirds-world-burrito-23/menu?ref=google"
+    },
+    "phone_number": "(805) 968-0123",
+    "hours": [
+      { "day": "Monday", "time": "11AM-11PM" },
+      { "day": "Tuesday", "time": "11AM-11PM" },
+      { "day": "Wednesday", "time": "11AM-11PM" },
+      { "day": "Thursday", "time": "11AM-11PM" },
+      { "day": "Friday", "time": "11AM-11PM" },
+      { "day": "Saturday", "time": "11AM-11PM" },
+      { "day": "Sunday", "time": "11AM-11PM" }
+    ],
     "stars": "4.6",
-    "closed": null
+    "closed": null,
+    "name": "freebirds",
+    "lat": "34.4131939050892",
+    "lng": "-119.8556685447693"
+  },
+  {
+    "price range": "$$",
+    "Menu": { "url": "http://www.starbucks.com/menu" },
+    "phone_number": "(805) 968-1192",
+    "hours": [
+      { "day": "Monday", "time": "5:30AM-9PM" },
+      { "day": "Tuesday", "time": "5:30AM-9PM" },
+      { "day": "Wednesday", "time": "5:30AM-9PM" },
+      { "day": "Thursday", "time": "5:30AM-9PM" },
+      { "day": "Friday", "time": "5:30AM-9PM" },
+      { "day": "Saturday", "time": "5:30AM-9PM" },
+      { "day": "Sunday", "time": "6AM-9PM" }
+    ],
+    "stars": "4.3",
+    "closed": null,
+    "name": "starbucks",
+    "lat": 34.413389348491634,
+    "lng": -119.85517716445432
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwifvrb9057zAhWzIK0GHVZCDxIYABABGgJwdg&amp;sig=AOD64_3i0RZGOvY0uAbGla8ZJyhYRutj7A&amp;q=&amp;ved=2ahUKEwiqu679057zAhXP-Z4KHQJCC9sQ09cBegQIPBAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "Menu": { "url": "https://www.buddhabowlsiv.com/new-page/" },
+    "phone_number": "(805) 961-4555",
+    "hours": [
+      { "day": "Monday", "time": "11AM-10PM" },
+      { "day": "Tuesday", "time": "11AM-10PM" },
+      { "day": "Wednesday", "time": "11AM-10PM" },
+      { "day": "Thursday", "time": "11AM-12AM" },
+      { "day": "Friday", "time": "11AM-12AM" },
+      { "day": "Saturday", "time": "11AM-10PM" },
+      { "day": "Sunday", "time": "11AM-10PM" }
+    ],
+    "stars": "4.5",
+    "closed": null,
+    "name": "buddha bowls",
+    "lat": "34.412895179545664",
+    "lng": "-119.85719472169878"
+  },
+  {
+    "price range": "$",
+    "phone_number": "(805) 770-3806",
+    "hours": [
+      { "day": "Monday", "time": "7AM-12AM" },
+      { "day": "Tuesday", "time": "7AM-12AM" },
+      { "day": "Wednesday", "time": "7AM-12AM" },
+      { "day": "Thursday", "time": "7AM-12AM" },
+      { "day": "Friday", "time": "7AM-12AM" },
+      { "day": "Saturday", "time": "7AM-12AM" },
+      { "day": "Sunday", "time": "7AM-12AM" }
+    ],
+    "stars": "4.4",
+    "closed": null,
+    "name": "super cuca",
+    "lat": 34.41224194424486,
+    "lng": -119.85501229773946
+  },
+  {
+    "price range": "$",
+    "Menu": { "url": "https://rockfiregrillislavista.menufy.com/" },
+    "phone_number": "(805) 770-3432",
+    "hours": [
+      { "day": "Monday", "time": "11AM-10PM" },
+      { "day": "Tuesday", "time": "11AM-10PM" },
+      { "day": "Wednesday", "time": "11AM-10PM" },
+      { "day": "Thursday", "time": "11AM-10PM" },
+      { "day": "Friday", "time": "11AM-10PM" },
+      { "day": "Saturday", "time": "11AM-10PM" },
+      { "day": "Sunday", "time": "11AM-10PM" }
+    ],
+    "stars": "4.4",
+    "closed": null,
+    "name": "rockfire grill",
+    "lat": 34.412829810095914,
+    "lng": -119.85780537183018
   },
   {
     "price range": "$",
     "Menu": {
-      "url": "http://places.singleplatform.com/sweet-alley-0/menu?ref=google"
+      "url": "http://places.singleplatform.com/caje-2/menu?ref=google"
     },
-    "phone_number": "(805) 845-4680",
-    "stars": "3.7",
-    "closed": null
+    "phone_number": "(805) 699-5033",
+    "hours": [
+      { "day": "Monday", "time": "7AM-5:30PM" },
+      { "day": "Tuesday", "time": "7AM-5:30PM" },
+      { "day": "Wednesday", "time": "7AM-5:30PM" },
+      { "day": "Thursday", "time": "7AM-5:30PM" },
+      { "day": "Friday", "time": "7AM-5:30PM" },
+      { "day": "Saturday", "time": "7AM-5:30PM" },
+      { "day": "Sunday", "time": "7AM-5:30PM" }
+    ],
+    "stars": "4.5",
+    "closed": null,
+    "name": "caje",
+    "lat": 34.41196903146998,
+    "lng": -119.85524833213279
   },
   {
-    "price range": "$$",
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwiGn-GJ1J7zAhXoDK0GHewoB1IYABABGgJwdg&amp;sig=AOD64_0RdkkGST8g6_BbW25K81S71N3Uow&amp;q=&amp;ved=2ahUKEwjR69mJ1J7zAhWJ_54KHePqAxAQ09cBegQIOBAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
     "Menu": {
-      "url": "http://places.singleplatform.com/cantina-95/menu?ref=google"
+      "url": "http://places.singleplatform.com/naan-stop/menu?ref=google"
     },
-    "phone_number": "(805) 968-2862",
-    "stars": "4.5",
-    "closed": null
+    "phone_number": "(805) 685-4715",
+    "hours": [
+      { "day": "Monday", "time": "12-9PM" },
+      { "day": "Tuesday", "time": "12-9PM" },
+      { "day": "Wednesday", "time": "12-9PM" },
+      { "day": "Thursday", "time": "12-9PM" },
+      { "day": "Friday", "time": "12-9PM" },
+      { "day": "Saturday", "time": "12-9PM" },
+      { "day": "Sunday", "time": "Closed" }
+    ],
+    "stars": "4.2",
+    "closed": null,
+    "name": "naan stop",
+    "lat": 34.41158473916065,
+    "lng": -119.85683083545158
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwiM6qSM1J7zAhXwDK0GHY53BVcYABABGgJwdg&amp;sig=AOD64_3Y1UQBKaBaFEWEIYTzfZtvaCDx_w&amp;q=&amp;ved=2ahUKEwictp2M1J7zAhXCo54KHcz8CA8Q09cBegQINBAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "Menu": {
+      "url": "http://places.singleplatform.com/sizzling-lunch-1/menu?ref=google"
+    },
+    "phone_number": "(805) 883-3092",
+    "hours": [
+      { "day": "Monday", "time": "Closed" },
+      { "day": "Tuesday", "time": "11AM-9PM" },
+      { "day": "Wednesday", "time": "11AM-9PM" },
+      { "day": "Thursday", "time": "11AM-9PM" },
+      { "day": "Friday", "time": "11AM-9PM" },
+      { "day": "Saturday", "time": "11AM-9PM" },
+      { "day": "Sunday", "time": "11AM-9PM" }
+    ],
+    "stars": "4.2",
+    "closed": null,
+    "name": "sizzling lunch",
+    "lat": 34.41091351431691,
+    "lng": -119.85567748557516
+  },
+  {
+    "price range": "$",
+    "phone_number": "(805) 685-7474",
+    "stars": "4.4",
+    "closed": "Temporarily closed",
+    "name": "habit",
+    "lat": "34.413185053977315",
+    "lng": "-119.8550918698311"
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwidq-WR1J7zAhWiHH0KHSt_ApMYABABGgJwdg&amp;sig=AOD64_0-Gy84dDLfE2z2mULemiRcaHfPaA&amp;q=&amp;ved=2ahUKEwiRzt2R1J7zAhXDr54KHZ3aCA8Q09cBegQIMxAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "phone_number": "(805) 685-3610",
+    "hours": [
+      { "day": "Sunday", "time": "11:30AM-1AM" },
+      { "day": "Monday", "time": "11:30AM-10PM" },
+      { "day": "Tuesday", "time": "11:30AM-10PM" },
+      { "day": "Wednesday", "time": "11:30AM-10PM" },
+      { "day": "Thursday", "time": "11:30AM-10PM" },
+      { "day": "Friday", "time": "11:30AM-1AM" },
+      { "day": "Saturday", "time": "11:30AM-1AM" }
+    ],
+    "stars": "4.0",
+    "closed": null,
+    "name": "pho bistro",
+    "lat": 34.41286595237374,
+    "lng": -119.85560774814077
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwjh-NmU1J7zAhWIIK0GHbq-DzoYABABGgJwdg&amp;sig=AOD64_21A3Xd3L0GXLkQ1Jp0co6pUulZVA&amp;q=&amp;ved=2ahUKEwiqptKU1J7zAhWXt54KHRGiBBAQ09cBegQIPhAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "Menu": { "url": "http://www.hanakitchen.com/menu" },
+    "phone_number": "(805) 845-4054",
+    "hours": [
+      { "day": "Monday", "time": "11AM-11:30PM" },
+      { "day": "Tuesday", "time": "11AM-11:30PM" },
+      { "day": "Wednesday", "time": "11AM-11:30PM" },
+      { "day": "Thursday", "time": "11AM-11:30PM" },
+      { "day": "Friday", "time": "11AM-11:30PM" },
+      { "day": "Saturday", "time": "11AM-11:30PM" },
+      { "day": "Sunday", "time": "11AM-11:30PM" }
+    ],
+    "stars": "4.1",
+    "closed": null,
+    "name": "hana kitchen",
+    "lat": 34.41327089132821,
+    "lng": -119.85640704642721
+  },
+  {
+    "price range": "$",
+    "Menu": {
+      "url": "http://places.singleplatform.com/deja-vu-8/menu?ref=google"
+    },
+    "phone_number": "(805) 968-8888",
+    "hours": [
+      { "day": "Sunday", "time": "11AM-1:45AM" },
+      { "day": "Monday", "time": "11AM-1:45AM" },
+      { "day": "Tuesday", "time": "11AM-1:45AM" },
+      { "day": "Wednesday", "time": "11AM-1:45AM" },
+      { "day": "Thursday", "time": "11AM-1:45AM" },
+      { "day": "Friday", "time": "11AM-2:30AM" },
+      { "day": "Saturday", "time": "11AM-2:30AM" }
+    ],
+    "stars": "4.0",
+    "closed": null,
+    "name": "deja vu",
+    "lat": 34.41169538010873,
+    "lng": -119.85687911521383
+  },
+  {
+    "price range": "$",
+    "Menu": {
+      "url": "https://www.dominos.com/en/pages/order/menu.jsp?utm_source=locallistings&utm_medium=loclist&utm_campaign=localmapsmenuclick#/menu/category/viewAll/"
+    },
+    "phone_number": "(805) 968-8272",
+    "hours": [
+      { "day": "Sunday", "time": "10:30AM-1AM" },
+      { "day": "Monday", "time": "10:30AM-1AM" },
+      { "day": "Tuesday", "time": "10:30AM-1AM" },
+      { "day": "Wednesday", "time": "10:30AM-1AM" },
+      { "day": "Thursday", "time": "10:30AM-1AM" },
+      { "day": "Friday", "time": "10:30AM-1AM" },
+      { "day": "Saturday", "time": "10:30AM-1AM" }
+    ],
+    "stars": "3.7",
+    "closed": null,
+    "name": "domino's pizza",
+    "lat": 34.411949853733844,
+    "lng": -119.85757112513969
+  },
+  {
+    "price range": "$",
+    "Menu": { "url": "https://www.drinkblenders.com/smooth/" },
+    "phone_number": "(805) 685-1134",
+    "hours": [
+      { "day": "Monday", "time": "8AM-10PM" },
+      { "day": "Tuesday", "time": "7AM-10PM" },
+      { "day": "Wednesday", "time": "7AM-10PM" },
+      { "day": "Thursday", "time": "7AM-10PM" },
+      { "day": "Friday", "time": "7AM-10PM" },
+      { "day": "Saturday", "time": "8AM-10PM" },
+      { "day": "Sunday", "time": "8AM-10PM" }
+    ],
+    "stars": "4.6",
+    "closed": null,
+    "name": "blenders in the grass",
+    "lat": 34.41321778469179,
+    "lng": -119.85658675443122
+  },
+  {
+    "price range": "$",
+    "Menu": {
+      "url": "http://places.singleplatform.com/dublins-sports-grill/menu?ref=google"
+    },
+    "phone_number": "(805) 895-7606",
+    "hours": [
+      { "day": "Monday", "time": "5PM-12AM" },
+      { "day": "Tuesday", "time": "5PM-12AM" },
+      { "day": "Wednesday", "time": "5PM-12AM" },
+      { "day": "Thursday", "time": "5PM-12AM" },
+      { "day": "Friday", "time": "5PM-12AM" },
+      { "day": "Saturday", "time": "5PM-12AM" },
+      { "day": "Sunday", "time": "5PM-12AM" }
+    ],
+    "stars": "4.0",
+    "closed": null,
+    "name": "dublin's sports grill",
+    "lat": 34.412911683327856,
+    "lng": -119.85519468795248
   },
   {
     "price range": "no price range found",
-    "phone_number": "(805) 994-6825",
-    "stars": "3.3",
-    "closed": null
+    "phone_number": "(805) 452-4836",
+    "hours": [
+      { "day": "Monday", "time": "6:30AM-12AM" },
+      { "day": "Tuesday", "time": "6:30AM-12AM" },
+      { "day": "Wednesday", "time": "6:30AM-12AM" },
+      { "day": "Thursday", "time": "6:30AM-12AM" },
+      { "day": "Friday", "time": "6:30AM-12AM" },
+      { "day": "Saturday", "time": "6:30AM-12AM" },
+      { "day": "Sunday", "time": "6:30AM-12AM" }
+    ],
+    "stars": "4.4",
+    "closed": null,
+    "name": "I.V. Drip",
+    "lat": 34.412951513386574,
+    "lng": -119.85557287942359
+  },
+  {
+    "order": [],
+    "Menu": { "url": "http://pizzamyheart.com/menu/" },
+    "phone_number": "(805) 845-0008",
+    "hours": [
+      { "day": "Monday", "time": "11AM-9PM" },
+      { "day": "Tuesday", "time": "11AM-9PM" },
+      { "day": "Wednesday", "time": "11AM-9PM" },
+      { "day": "Thursday", "time": "11AM-9PM" },
+      { "day": "Friday", "time": "11AM-9PM" },
+      { "day": "Saturday", "time": "4-9PM" },
+      { "day": "Sunday", "time": "4-9PM" }
+    ],
+    "stars": "4.4",
+    "closed": null,
+    "name": "Pizza My Heart",
+    "lat": 34.41099096361745,
+    "lng": -119.8555442689758
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwjquYa21J7zAhWPH60GHb_YAXwYABABGgJwdg&amp;sig=AOD64_1UVOceo1YjsbC_Vsnd7IrhvALMIw&amp;q=&amp;ved=2ahUKEwj57_611J7zAhXHxZ4KHTj8BFsQ09cBegQIORAG&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "Menu": { "url": "http://order.online/store/rosarito-275299" },
+    "phone_number": "(805) 685-4444",
+    "hours": [
+      { "day": "Sunday", "time": "10:30AM-1:30AM" },
+      { "day": "Monday", "time": "10:30AM-1:30AM" },
+      { "day": "Tuesday", "time": "10:30AM-1:30AM" },
+      { "day": "Wednesday", "time": "10:30AM-1:30AM" },
+      { "day": "Thursday", "time": "10:30AM-2AM" },
+      { "day": "Friday", "time": "10:30AM-2AM" },
+      { "day": "Saturday", "time": "10AM-2AM" }
+    ],
+    "stars": "3.8",
+    "closed": null,
+    "name": "Rosarito",
+    "lat": 34.41179938246647,
+    "lng": -119.85684961091468
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwj-j6G51J7zAhVjDa0GHZpOCHIYABABGgJwdg&amp;sig=AOD64_0OiMwWOoc2N-ufEST09VzHciGl3Q&amp;q=&amp;ved=2ahUKEwim45i51J7zAhXXsJ4KHXakDg8Q09cBegQIMhAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "phone_number": "(805) 685-8895",
+    "hours": [
+      { "day": "Monday", "time": "9AM-10PM" },
+      { "day": "Tuesday", "time": "9AM-10PM" },
+      { "day": "Wednesday", "time": "9AM-10PM" },
+      { "day": "Thursday", "time": "9AM-10PM" },
+      { "day": "Friday", "time": "9AM-10:30PM" },
+      { "day": "Saturday", "time": "9AM-10:30PM" },
+      { "day": "Sunday", "time": "9AM-10:30PM" }
+    ],
+    "stars": "4.3",
+    "closed": null,
+    "name": "Sam's To Go",
+    "lat": 34.413219259854095,
+    "lng": -119.85679060231635
+  },
+  {
+    "price range": "$",
+    "Menu": {
+      "url": "http://places.singleplatform.com/spudnuts-donuts-1/menu?ref=google"
+    },
+    "phone_number": "(805) 845-4517",
+    "hours": [
+      { "day": "Monday", "time": "8AM-8PM" },
+      { "day": "Tuesday", "time": "8AM-8PM" },
+      { "day": "Wednesday", "time": "8AM-8PM" },
+      { "day": "Thursday", "time": "8AM-8PM" },
+      { "day": "Friday", "time": "8AM-9PM" },
+      { "day": "Saturday", "time": "8AM-9PM" },
+      { "day": "Sunday", "time": "8AM-8PM" }
+    ],
+    "stars": "4.4",
+    "closed": null,
+    "name": "Spudnuts",
+    "lat": 34.411860603629535,
+    "lng": -119.85486477624366
+  },
+  {
+    "order_now": "<a href=\"/aclk?sa=l&amp;ai=DChcSEwjX28--1J7zAhXBG30KHU83DBsYABABGgJwdg&amp;sig=AOD64_1xwBSyPPsiS20Q-n9NRcIuggJLXg&amp;q=&amp;ved=2ahUKEwj-8si-1J7zAhXLsJ4KHRV6AA8Q09cBegQIMxAM&amp;adurl=\">\n <span class=\"YDTVRb\">\n  Order Now\n </span>\n <span class=\"s7xtN\">\n  \u00b7 grubhub.com\n </span>\n</a>",
+    "phone_number": "(805) 961-8272",
+    "hours": [
+      { "day": "Monday", "time": "12-9PM" },
+      { "day": "Tuesday", "time": "12-9PM" },
+      { "day": "Wednesday", "time": "Closed" },
+      { "day": "Thursday", "time": "12-9PM" },
+      { "day": "Friday", "time": "12-9PM" },
+      { "day": "Saturday", "time": "12-9PM" },
+      { "day": "Sunday", "time": "12-9PM" }
+    ],
+    "stars": "4.1",
+    "closed": null,
+    "name": "Sushiya Express",
+    "lat": 34.411985258698614,
+    "lng": -119.85746115457007
+  },
+  {
+    "name": "mojo asian",
+    "hours": [
+      { "day": "Monday", "time": "12-10PM" },
+      { "day": "Tuesday", "time": "12-10PM" },
+      { "day": "Wednesday", "time": "12-10PM" },
+      { "day": "Thursday", "time": "12-10PM" },
+      { "day": "Friday", "time": "12-10PM" },
+      { "day": "Saturday", "time": "12-10PM" },
+      { "day": "Sunday", "time": "12-10PM" }
+    ],
+    "lat": 34.411876093387505,
+    "lng": -119.8547279835839,
+    "stars": "4.3"
+  },
+  {
+    "name": "bagel cafe",
+    "hours": [
+      { "day": "Monday", "time": "6:30AM-3PM" },
+      { "day": "Tuesday", "time": "6:30AM-3PM" },
+      { "day": "Wednesday", "time": "6:30AM-3PM" },
+      { "day": "Thursday", "time": "6:30AM-3PM" },
+      { "day": "Friday", "time": "6:30AM-3PM" },
+      { "day": "Saturday", "time": "6:30AM-3PM" },
+      { "day": "Sunday", "time": "6:30AM-3PM" }
+    ],
+    "lat": 34.4109577709338,
+    "lng": -119.85704630618785
+  },
+  {
+    "name": "PokeCeviche",
+    "hours": [
+      { "day": "Monday", "time": "11AM-12AM" },
+      { "day": "Tuesday", "time": "11AM-12AM" },
+      { "day": "Wednesday", "time": "11AM-12AM" },
+      { "day": "Thursday", "time": "11AM-12AM" },
+      { "day": "Friday", "time": "11AM-1AM" },
+      { "day": "Saturday", "time": "11AM-1AM" },
+      { "day": "Sunday", "time": "11AM-12AM" }
+    ],
+    "lat": 34.41305551452,
+    "stars": "3.8",
+    "lng": -119.85724747071801
+  },
+  {
+    "name": "Lao Wang",
+    "stars": 4.2,
+    "hours": [
+      { "day": "Monday", "time": "11AM-10PM" },
+      { "day": "Tuesday", "time": "11AM-10PM" },
+      { "day": "Wednesday", "time": "11AM-10PM" },
+      { "day": "Thursday", "time": "11AM-10PM" },
+      { "day": "Friday", "time": "11AM-10PM" },
+      { "day": "Saturday", "time": "11AM-10PM" },
+      { "day": "Sunday", "time": "11AM-10PM" }
+    ],
+    "lat": 34.413220292467656,
+    "lng": -119.85477268693786
   }
 ]

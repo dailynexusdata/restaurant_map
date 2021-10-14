@@ -3,7 +3,9 @@
   letter-spacing: normal !important;
   font-family: Arial, Helvetica, sans-serif !important;
 }
-
+table, th,td{
+  border: 1px solid black 
+}
 /* Main Title of Restaurant's Name */
 .rest-name {
 }
@@ -11,38 +13,56 @@
 .rest-desc {
 }
 
+
 .buttonContainer {
   display: flex;
   flex-wrap: wrap;
+  text-decoration: blue;
 }
 
 /* remove underline from link, dont change color when link clicked on, change the button background-color when mouse hover */
 
 /* use this class to apply styles on both the menu and the ordering options */
 .buttonLink {
+  text-decoration: none;
   padding: 7px;
   margin: 5px;
-  border-radius: 10px;
+  border-radius: 10px; 
+}
+
+a:hover{
+  text-decoration: none;
+  color:blueviolet
+}
+a:visited{ 
+  text-decoration:none;
+  color: blue;
 }
 
 /* This is the order button options: */
 /* maybe change the background color + border color and make the text white */
 /* try some of these colors like maybe the blue or green: ["#4e79a7", "#f28e2c", "#e15759", "#76b7b2", "#59a14f", "#edc949", "#af7aa1", "#ff9da7", "#9c755f", "#bab0ab"] */
-.orderButton {
-  border: 2px solid black;
+.orderButton { 
+  background-color: rgba(158, 244, 250, 0.568);
+  border: 2px solid black 
+
 }
 
 /* Make this similar to the orderButton's - maybe a different background color */
 .menuButton {
-  border: 2px solid black;
+  background-color: rgb(201, 187, 224);
+  border: 2px solid rgb(0, 0, 0);
 }
-
+a:hover{
+  text-decoration: none;
+  color:blueviolet
+}
 .restHourTable {
   border-collapse: collapse;
-}
+} 
 
 .restHourTable tr:nth-child(even) {
-  background-color: red;
+  background-color: rgb(0, 255, 106);
 }
 
 h1,
